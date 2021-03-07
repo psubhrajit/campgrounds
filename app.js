@@ -2,6 +2,7 @@ var express = require("express"),
     app = express(),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
+    dotenv = require("dotenv").config(),
     // Campground = require("./models/campground"),
     // Comment = require("./models/comment"),
     methodOverride = require('method-override'),
@@ -13,13 +14,12 @@ seedDB = require("./seed");
 //  seedDB();
 
 
-
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 var commentRoutes = require("./routes/comments");
 
 
-mongoose.connect("mongodb+srv://sibun:sibun@cluster0.p1pv2.mongodb.net/test", {
+mongoose.connect(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -52,4 +52,5 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
+const port = 6265;
 app.listen(process.env.PORT);
