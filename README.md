@@ -1,8 +1,3 @@
 # BootCamp
 
-
-
-
-
-
-[check out the website here]()
+[Check out the website here](https://psubhrajit.github.io/campgrounds/)
