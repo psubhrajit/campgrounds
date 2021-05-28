@@ -1,3 +1,3 @@
 # BootCamp
 
-[Check out the website here](https://psubhrajit.github.io/campgrounds/)
+[Check out the website here](https://campswithsubhra.herokuapp.com/)
